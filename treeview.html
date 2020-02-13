@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="treefontello/css/fontello.css">
+    <style>
+        .tree{
+            color: gray;
+        }
+        body{
+            font-family: "fontello";
+            font-size: 30px;
+        }
+        .tree ul, .tree{
+            list-style: none;
+            padding-left: 30px;
+        }
+        .tree *:before{
+            width: 40px;
+            height: 15px;
+            display: inline-block;
+        }
+        .tree a:before{
+            content: "\e800";
+            font-family: fontello;
+        }
+        .tree a{
+            color: gray;
+            text-decoration: none;
+        }
+        .tree label{
+            cursor: pointer;
+        }
+        .tree label:before{
+            content:'\f256';
+            font-family: fontello;
+        }
+        
+/*        속성 선택자*/
+        .tree input[type="checkbox"]{
+            display: none;
+        }
+        
+/*        속성 선택자*/
+/*        check~ul ul 체크박스 선택에 따라서 ul의 숨기기 나타내기 기능*/
+        .tree input[type="checkbox"]:checked~ul{
+            display: none;
+        }
+
+        .tree input[type="checkbox"]:checked+label:before{
+            content: '\f255';
+            font-family: fontello;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="test"></div>
+    <i class="icon-github-1"></i>
+    <ul class="tree">
+        <li>
+        <input type="checkbox" id="root">
+        <label for="root">ROOT</label>
+            <ul>
+                 <li><a href="">node1</a></li>
+                 <li><a href="">node2</a></li>
+                 <li><a href="">node3</a></li>
+                 <li>
+                 <input type="checkbox" id="node3">
+                 <label for="node3">node4</label>
+                 <ul>
+                     <li><a href="">node3-1</a></li>
+                     <li><a href="">node3-2</a></li>
+                     <li><a href="">node3-3</a></li>   
+                  </ul>
+                 </li>
+            </ul>
+        </li>
+    </ul>
+   
+</body>
+
+</html>

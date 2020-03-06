@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script>
+        var first = new mojs.Shape({
+            shapeL:'circle',
+            radius:{0:40},
+            stroke:'cyan',
+            strokeWidth:{20:0},
+            fill:'none',
+            left:0,
+            top:0
+            
+        });
+        var second = new mojs.Shape({
+            shapeL:'circle',
+            radius:{0:20},
+            stroke:'deeppink',
+            strokeWidth:{10:0},
+            fill:'none',
+            left:0,
+            top:0
+        });
+        
+        document.addEventListener('click', function(e){first.tune({x:e.pageX, y:e.pageY}).replay();
+        second.tune({x:e.pageX, y:e.pageY}).replay();
+        });
+    </script>
+</body>
+</html>
